@@ -1,6 +1,6 @@
 # mp-sdk
 
-[![github](https://img.shields.io/github/followers/willin.svg?style=social&label=Followers)](https://github.com/willin) [![npm](https://img.shields.io/npm/v/mp-sdk.svg)](https://npmjs.org/package/mp-sdk) [![npm](https://img.shields.io/npm/dm/mp-sdk.svg)](https://npmjs.org/package/mp-sdk) [![npm](https://img.shields.io/npm/dt/mp-sdk.svg)](https://npmjs.org/package/mp-sdk)
+[![github](https://img.shields.io/github/followers/willin.svg?style=social&label=Followers)](https://github.com/willin) [![npm](https://img.shields.io/npm/v/mp-sdk.svg)](https://npmjs.org/package/mp-sdk) [![npm](https://img.shields.io/npm/dm/mp-sdk.svg)](https://npmjs.org/package/mp-sdk) [![npm](https://img.shields.io/npm/dt/mp-sdk.svg)](https://npmjs.org/package/mp-sdk) [![codebeat badge](https://codebeat.co/badges/dcda6ad6-46a4-4178-900a-aaf9ea056321)](https://codebeat.co/projects/github-com-willin-mp-sdk-master)
 
 ## License
 
