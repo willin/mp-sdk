@@ -1,0 +1,8 @@
+{
+  "name": "mp-sdk",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": "git@github.com:willin/mp-sdk.git",
+  "author": "willin <willin@willin.org>",
+  "license": "Apache-2.0"
+}
