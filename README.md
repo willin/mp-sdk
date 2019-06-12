@@ -47,6 +47,13 @@ cloud.auth.code2Session({
 - 接口文档： https://developers.weixin.qq.com/miniprogram/dev/api-backend/
 - 小程序端授权： https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html
 
+## 相关项目推荐
+
+- 阿里云SDK： https://github.com/willin/waliyun
+- 腾讯云SDK： https://github.com/willin/wqcloud
+- 网易云音乐SDK： https://github.com/willin/wnm
+- Rescuetime SDK： https://github.com/willin/wrescuetime
+
 ## License
 
 Apache 2.0
