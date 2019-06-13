@@ -45,8 +45,8 @@ module.exports = (appid, secret) => {
     });
   };
 
-  const makeRequest = ({ url, params = {}, data }) => getAccessToken()
-    .then(token => axios.post(url, data, { params: { access_token: token, ...params } }));
+  const makeRequest = ({ url, data = {} }) => getAccessToken()
+    .then(token => axios.post(url, data, { params: { access_token: token } }));
 
   const originObj = {
     auth: {
@@ -69,7 +69,7 @@ module.exports = (appid, secret) => {
       if (modules.indexOf(module) !== -1) {
         const loadModule = methods => Object.keys(methods).reduce((o, method) => {
           Object.assign(o, {
-            [method]: (params, data) => makeRequest({ url: methods[method], data, params })
+            [method]: data => makeRequest({ url: methods[method], data })
           });
           return o;
         }, {});

@@ -1,6 +1,10 @@
 {
   "name": "mp-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "description": "微信小程序服务器端SDK。Wechat Mini Program (mp) Serverside SDK",
+  "keywords": [
+    "sdk", "mp", "wechat", "mini-program"
+  ],
   "main": "src/index.js",
   "repository": "git@github.com:willin/mp-sdk.git",
   "author": "willin <willin@willin.org>",
