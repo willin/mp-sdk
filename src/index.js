@@ -45,8 +45,8 @@ module.exports = (appid, secret) => {
     });
   };
 
-  const makeRequest = ({ url, data = {} }) => getAccessToken()
-    .then(token => axios.post(url, data, { params: { access_token: token } }));
+  const makeRequest = ({ url, data = {}, module }) => getAccessToken()
+    .then(token => axios.post(url, data, { params: { access_token: token }, ...(module === 'wxacode' ? { responseType: 'arraybuffer' } : {}) }));
 
   const originObj = {
     auth: {
@@ -69,7 +69,7 @@ module.exports = (appid, secret) => {
       if (modules.indexOf(module) !== -1) {
         const loadModule = methods => Object.keys(methods).reduce((o, method) => {
           Object.assign(o, {
-            [method]: data => makeRequest({ url: methods[method], data })
+            [method]: data => makeRequest({ url: methods[method], data, module })
           });
           return o;
         }, {});

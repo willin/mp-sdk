@@ -13,8 +13,10 @@ Minimum, Flexible, Scalable.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [安装使用](#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8)
 - [参考文档](#%E5%8F%82%E8%80%83%E6%96%87%E6%A1%A3)
+- [相关项目推荐](#%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -39,6 +41,22 @@ cloud.auth.code2Session({
   js_code: 'js_code'
 }).then(result => {
   // code here
+});
+```
+
+二维码处理示例：
+
+```js
+const sdk = require('mp-sdk');
+const fs = require('fs');
+
+const cloud = sdk('appid', 'secret');
+
+cloud.wxacode.getUnlimited({
+  scene: 'test',
+  path: 'page/index?foo=bar'
+}).then((d) => {
+  fs.writeFileSync('1.png', d);
 });
 ```
 
