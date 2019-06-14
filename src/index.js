@@ -3,6 +3,7 @@ const axios = require('axios');
 const debug = require('debug');
 const fs = require('fs');
 const path = require('path');
+const decryptData = require('./crypto');
 
 const modules = fs.readdirSync(path.join(__dirname, '/modules')).filter(f => f.endsWith('.js')).map(f => f.replace(/.js$/, ''));
 
@@ -49,6 +50,9 @@ module.exports = (appid, secret) => {
     .then(token => axios.post(url, data, { params: { access_token: token }, ...(module === 'wxacode' ? { responseType: 'arraybuffer' } : {}) }));
 
   const originObj = {
+    crypto: {
+      decryptData: decryptData(appid)
+    },
     auth: {
       code2Session: params => axios.get('/sns/jscode2session', {
         params: {

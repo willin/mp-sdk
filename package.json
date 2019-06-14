@@ -1,6 +1,6 @@
 {
   "name": "mp-sdk",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "微信小程序服务器端SDK。Wechat Mini Program (mp) Serverside SDK",
   "keywords": [
     "sdk", "mp", "wechat", "mini-program"
